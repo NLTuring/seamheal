@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "files": {
+    "dovetail_assembled.glb": {
+      "bytes": 1303956,
+      "sha256": "0a14932989fdbbb867c420d277c2f9b89a794bdc4f715f8c840a647b3c932366",
+      "gltf_meshes": 2,
+      "primitives": 2,
+      "triangles": 56,
+      "embedded_images": 2,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "dovetail_exploded.glb": {
+      "bytes": 1304036,
+      "sha256": "e915aba5653c6f87e508cb8aeb513643652dd7417df83eec474f148fdd44e081",
+      "gltf_meshes": 2,
+      "primitives": 2,
+      "triangles": 56,
+      "embedded_images": 2,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "panel_damaged.glb": {
+      "bytes": 1120564,
+      "sha256": "a605ba165023d2dbd7da9a2295cde6902b8daa2544febd18b9a80918c98bff1d",
+      "gltf_meshes": 1,
+      "primitives": 1,
+      "triangles": 3772,
+      "embedded_images": 1,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "panel_intact.glb": {
+      "bytes": 1126592,
+      "sha256": "63a2f9f84961fa58e989b5cd6e869ef61ca45e26c22d57eb61a8bdd4c3181a7d",
+      "gltf_meshes": 1,
+      "primitives": 1,
+      "triangles": 4096,
+      "embedded_images": 1,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "roof_damaged.glb": {
+      "bytes": 849812,
+      "sha256": "d0032359f73ed77ce8585b15e72084ba6a2795dae558f55280de87c3b70e1c5c",
+      "gltf_meshes": 1,
+      "primitives": 1,
+      "triangles": 8344,
+      "embedded_images": 2,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "roof_intact.glb": {
+      "bytes": 881356,
+      "sha256": "423ce36cc10e6d8b403e250be3e5fb90a8b0b97a4a4077e9ce6e13c679a96af6",
+      "gltf_meshes": 1,
+      "primitives": 1,
+      "triangles": 9048,
+      "embedded_images": 2,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "sakura_courtyard_damaged.glb": {
+      "bytes": 21107612,
+      "sha256": "dc2a5323ab37a0fd506ab8ebecace6f02fb77e292f446a31c05b2d0ce7d4abc6",
+      "gltf_meshes": 19,
+      "primitives": 56,
+      "triangles": 378418,
+      "embedded_images": 11,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    },
+    "sakura_courtyard_intact.glb": {
+      "bytes": 21145176,
+      "sha256": "e155936f09d569f926942acd9641960179900387466eaa22b887e7898a74bdd1",
+      "gltf_meshes": 19,
+      "primitives": 56,
+      "triangles": 379446,
+      "embedded_images": 11,
+      "finite_vertices_and_uv": true,
+      "no_external_texture_dependencies": true
+    }
+  },
+  "repair_cases": {
+    "roof": {
+      "intact": {
+        "vertices_merged": 4526,
+        "triangles": 9048,
+        "watertight_after_position_merge": true,
+        "winding_consistent": true,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_triangles": 0
+      },
+      "damaged": {
+        "vertices_merged": 4226,
+        "triangles": 8344,
+        "watertight_after_position_merge": false,
+        "winding_consistent": true,
+        "boundary_edges": 108,
+        "nonmanifold_edges": 0,
+        "degenerate_triangles": 0
+      },
+      "all_surviving_positions_and_uv_match": true,
+      "missing_triangles": 704
+    },
+    "panel": {
+      "intact": {
+        "vertices_merged": 2050,
+        "triangles": 4096,
+        "watertight_after_position_merge": true,
+        "winding_consistent": true,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_triangles": 0
+      },
+      "damaged": {
+        "vertices_merged": 1922,
+        "triangles": 3772,
+        "watertight_after_position_merge": false,
+        "winding_consistent": true,
+        "boundary_edges": 72,
+        "nonmanifold_edges": 0,
+        "degenerate_triangles": 0
+      },
+      "all_surviving_positions_and_uv_match": true,
+      "missing_triangles": 324
+    }
+  },
+  "scope": "File integrity, embedded textures, geometry, source-to-GLB topology and unchanged UV outside synthetic holes. No browser FPS, print or mechanical validation is claimed."
+}

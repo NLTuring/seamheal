@@ -1,0 +1,34 @@
+# Local dependencies and generated files
+.venv/
+venv/
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+coverage/
+*.log
+/workbench/runtime/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor, operating-system, and Blender backup files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+*.blend1
+*.blend2

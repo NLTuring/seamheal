@@ -1,0 +1,2 @@
+# Solid boolean operations for printable subdivision and dovetail samples.
+manifold3d>=3.0,<4

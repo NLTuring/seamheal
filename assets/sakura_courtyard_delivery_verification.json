@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "verified_date": "2026-10-03",
+  "archive": {
+    "path": "sakura_courtyard_asset_pack.zip",
+    "bytes": 100102149,
+    "files": 40,
+    "sha256": "32995f89bd3749f1a88de556bdc4eeb4ec0eec09a86d6fe6af15637c328db804",
+    "zip_crc_passed": true,
+    "all_archived_bytes_match_source": true,
+    "missing_files": [],
+    "unexpected_files": []
+  },
+  "inventory": {
+    "blend_files": 2,
+    "glb_files": 8,
+    "preview_pngs": 8,
+    "texture_pngs": 12,
+    "source_scripts": 7,
+    "reports": 2,
+    "readme_files": 1
+  },
+  "export_verification": "sakura_courtyard/reports/export_verification.json",
+  "all_20_pngs_passed_image_integrity_check": true,
+  "preview_visual_review": {
+    "reviewed": [
+      "courtyard_intact.png",
+      "repair_comparison.png",
+      "dovetail_exploded.png"
+    ],
+    "comparison_labels": [
+      "人为破损",
+      "完整基准"
+    ]
+  },
+  "native_files": {
+    "sakura_courtyard_master.blend": {
+      "readable": true,
+      "mesh_objects": 334,
+      "packed_images": 11,
+      "camera_and_lights_present": true,
+      "repair_targets_match_manifest": true,
+      "repair_targets": {
+        "roof": {
+          "object": "Roof_RepairTarget",
+          "vertices": 4526,
+          "triangles": 9048,
+          "boundary_edges": 0,
+          "boundary_components": 0,
+          "nonmanifold_or_wire_edges": 0,
+          "degenerate_faces": 0,
+          "watertight": true,
+          "uv_layers": 1,
+          "signed_volume_design_units": 0.759383
+        },
+        "panel": {
+          "object": "Panel_RepairTarget",
+          "vertices": 2050,
+          "triangles": 4096,
+          "boundary_edges": 0,
+          "boundary_components": 0,
+          "nonmanifold_or_wire_edges": 0,
+          "degenerate_faces": 0,
+          "watertight": true,
+          "uv_layers": 1,
+          "signed_volume_design_units": 0.17808
+        }
+      }
+    },
+    "sakura_courtyard_damaged.blend": {
+      "readable": true,
+      "mesh_objects": 20,
+      "packed_images": 11,
+      "camera_and_lights_present": true,
+      "repair_targets_match_manifest": true,
+      "repair_targets": {
+        "roof": {
+          "object": "Roof_RepairTarget",
+          "vertices": 4226,
+          "triangles": 8344,
+          "boundary_edges": 108,
+          "boundary_components": 2,
+          "nonmanifold_or_wire_edges": 0,
+          "degenerate_faces": 0,
+          "watertight": false,
+          "uv_layers": 1,
+          "signed_volume_design_units": 0.738126
+        },
+        "panel": {
+          "object": "Panel_RepairTarget",
+          "vertices": 1922,
+          "triangles": 3772,
+          "boundary_edges": 72,
+          "boundary_components": 2,
+          "nonmanifold_or_wire_edges": 0,
+          "degenerate_faces": 0,
+          "watertight": false,
+          "uv_layers": 1,
+          "signed_volume_design_units": 0.173072
+        }
+      }
+    }
+  },
+  "scene_sample_and_joint_consistency": {
+    "roof_intact": {
+      "geometry_uv_and_world_transform_match_full_scene": true
+    },
+    "panel_intact": {
+      "geometry_uv_and_world_transform_match_full_scene": true
+    },
+    "roof_damaged": {
+      "geometry_uv_and_world_transform_match_full_scene": true
+    },
+    "panel_damaged": {
+      "geometry_uv_and_world_transform_match_full_scene": true
+    },
+    "joints": {
+      "only_translation_differs": true,
+      "parts": {
+        "Dovetail_A_Mesh": {
+          "vertices_merged": 16,
+          "triangles": 28,
+          "watertight_after_position_merge": true,
+          "winding_consistent": true,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "degenerate_triangles": 0
+        },
+        "Dovetail_B_Mesh": {
+          "vertices_merged": 16,
+          "triangles": 28,
+          "watertight_after_position_merge": true,
+          "winding_consistent": true,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "degenerate_triangles": 0
+        }
+      }
+    }
+  },
+  "scope": "文件完整性、源场景读取、内嵌贴图、几何与 UV、样本与全景一致性、燕尾平移变换和预览目检。完整基准为人为破损前保存的模型；尚未接入真实修复算法，未验证浏览器帧率、整景打印适配或力学性能。"
+}

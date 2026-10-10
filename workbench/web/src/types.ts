@@ -1,0 +1,11 @@
+export type Sample = {id:string;title:string;subtitle:string;kind:'repair'|'showcase';original_url:string;reference_url:string|null;preview_url:string|null;can_repair:boolean};
+export type Segment = [number[], number[]];
+export type Diagnosis = {vertices:number;triangles:number;boundary_edges:number;boundary_loops:number;nonmanifold_edges:number;degenerate_triangles:number;watertight:boolean;winding_consistent:boolean;has_uv:boolean;boundary_segments:Segment[]};
+export type Report = {before:Diagnosis;after:Diagnosis;added_vertices:number;added_triangles:number;filled_loops:number;elapsed_ms:number;method:string;warnings:string[];original_vertices_preserved:boolean;original_uv_preserved:boolean|null;export_reloaded_and_verified:boolean};
+export type Result = {model_id:string;result_url:string;report_url:string;report:Report};
+export type Part = {id:string;name:string;triangles:number;has_uv:boolean;repair_target:boolean};
+export type ScenePart = Part & {diagnosis:Diagnosis|null;needs_work:boolean;error:string|null};
+export type SceneDiagnosis = {parts:ScenePart[];total_parts:number;issue_parts:number;recommended_part_ids:string[];diagnosis:Diagnosis};
+export type Seam = {edge_count:number;mean_angle_deg:number|null;max_angle_deg:number|null;uv_stretch_mean:number|null;uv_stretch_max:number|null;uv_degenerate_triangles:number;seam_segments:Segment[]};
+export type FullReport = Report & {kind?:string;created_at?:string;seam_before?:Seam;seam_after?:Seam;seam_segments?:Segment[];seam_optimization?:{applied:boolean;moved_vertices:number};cleanup?:{removed_duplicate_faces:number;removed_degenerate_faces:number;flipped_faces:number};outside_mask_preserved?:boolean;masked_pixels?:number;warning?:string;scope_type?:'scene';scene_before?:SceneDiagnosis;scene_after?:SceneDiagnosis;processed_part_ids?:string[];part_reports?:{id:string;name:string;report:FullReport}[]};
+export type Artifact = Omit<Result,'report'> & {result_id:string;part_id:string|null;kind:'repair'|'texture'|'split'|'joint';bundle_url:string;stl_urls:{name:string;url:string}[];report:FullReport};

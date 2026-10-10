@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+runtime/
+web/node_modules/
+web/dist/
+*.log
